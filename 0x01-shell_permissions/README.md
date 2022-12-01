@@ -1,1 +1,1 @@
-Create a script that creates a directory called my_dir with permissions 751 in the working directory
+Write a script that adds execute permission to the owner and the group owner, and read permission to other users, to the file hello
