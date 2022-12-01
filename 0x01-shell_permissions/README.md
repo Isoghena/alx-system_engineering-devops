@@ -1,1 +1,5 @@
-Write a script that prints all the groups the current user is part of.
+ script that changes the owner to vincent and the group owner to staff for all the files and directories in the working directory.
+
+
+
+
