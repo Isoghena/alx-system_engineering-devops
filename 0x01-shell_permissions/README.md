@@ -1,1 +1,1 @@
-Write a script that will play the StarWars IV episode in the terminal
+Create a script that switches the current user to the user betty Create a script that switches the current user to the user betty
