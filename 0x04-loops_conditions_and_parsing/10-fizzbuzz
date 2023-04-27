@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Display "FizzBuzz" when the number is a multiple of 3 and 5.
+# Display "Fizz" when the number is a multiple of 3.
+# Display "Buzz" when the number is a multiple of 5.
+
+for numb in (1..100)
+do
+	if (( numb % 3 == 0 && numb % 5 == 0 ))
+	then
+		echo "FizzBuzz"
+	elif (( numb % 3 == 0 ))
+	then
+		echo "Fizz"
+	elif (( numb % 5 == 0 ))
+	then
+		echo "Buzz"
+	else
+		echo "$numb"
+	fi
+done
