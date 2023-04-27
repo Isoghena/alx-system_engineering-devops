@@ -3,18 +3,18 @@
 # Display "Fizz" when the number is a multiple of 3.
 # Display "Buzz" when the number is a multiple of 5.
 
-for numb in (1..100)
+for ((n=1;n<=100;n++))
 do
-	if (( numb % 3 == 0 && numb % 5 == 0 ))
-	then
-		echo "FizzBuzz"
-	elif (( numb % 3 == 0 ))
-	then
-		echo "Fizz"
-	elif (( numb % 5 == 0 ))
-	then
-		echo "Buzz"
-	else
-		echo "$numb"
-	fi
+    if ((n % 15 == 0))
+    then
+        echo "FizzBuzz"
+    elif ((n % 3 == 0))
+    then
+        echo "Fizz"
+    elif ((n % 5 == 0))
+    then
+        echo "Buzz"
+    else
+        echo "$n"
+    fi
 done
