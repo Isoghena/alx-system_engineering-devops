@@ -2,7 +2,7 @@
 # Display the contents of the current directory in a list
 # Display the name after the first dash
 
-list-$(ls)
-for i in $list; do
-	echo "$i" | cut -d '-' -f2
+for f in *; do
+    echo "$f" | cut -d '-' -f 2
+
 done
