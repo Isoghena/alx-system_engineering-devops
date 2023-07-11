@@ -1,11 +1,7 @@
-!/usr/bin/env bash
-# configures a new HAproxy as a load balancer
+#!/usr/bin/env bash
+# A script that install load balancer
 
-# Install HAproxy on a server
-apt-get -y update
-apt-get -y install haproxy=2.6.\*
 
-# Configure haproxy configuration file to distribute requests using a roundrobin algorithm
 echo -e "Loading please wait...\n"
 
 function install() {
@@ -40,12 +36,11 @@ defaults
 frontend ghena-tech-frontend
     bind *:80
     default_backend ghena-tech-backend
-backend clickviral-tech-backend
+backend ghena-tech-backend
     balance roundrobin
     server 217986-web-01 18.206.233.133:80 check
     server 217986-web-02 54.227.129.63:80 check
 "
-
 
 # shellcheck disable=SC2154
 echo "$server_config" | sudo dd status=none of=/etc/haproxy/haproxy.cfg
@@ -58,4 +53,3 @@ if [ "$(pgrep -c haproxy)" -le 0 ]; then
 else
 	sudo service haproxy restart
 fi
-
